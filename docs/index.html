@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="https://play.walletwars.io/images/ww_connect.png" type="image/png">
+  <link rel="stylesheet" href="style.css">
+  <title>Raffle Page</title>
+</head>
+
+<body>
+  <div class="container">
+    <h1>
+      <img src="https://play.walletwars.io/images/ww-logo-inline.png" alt="Wallet Wars Logo" id="wwLogo">
+      <span>Raffle</span>
+    </h1>
+    <textarea id="playerInput" placeholder="Enter list of snapshot wallet addresses from leaderboard as [wallet address], [# of tickets], with each on a new line"></textarea>
+    <button id="pickWinnerBtn">Draw Raffle</button>
+    <div id="processDisplay">
+      <p>Concatenated String: <span id="concatString"></span><img src="https://play.walletwars.io/images/ww_connect.png" class="loading" id="loadingConcatString"></p>
+      <p>Hash (SHA-256): <span id="hashValue"></span><img src="https://play.walletwars.io/images/ww_connect.png" class="loading" id="loadingHashValue"></p>
+      <p>Hex Segment: <span id="hexSegment"></span><img src="https://play.walletwars.io/images/ww_connect.png" class="loading" id="loadingHexSegment"></p>
+      <p>Normalized Value: <span id="normalizedValue"></span><img src="https://play.walletwars.io/images/ww_connect.png" class="loading" id="loadingNormalizedValue"></p>
+      <p>Winner's Index: <span id="winnerIndex"></span><img src="https://play.walletwars.io/images/ww_connect.png" class="loading" id="loadingWinnerIndex"></p>
+      <p>Winner: <span id="winner"></span><img src="https://play.walletwars.io/images/ww_connect.png" class="loading" id="loadingWinner"></p>
+    </div>
+  </div>
+  <div class="floating-buttons">
+    <a href="https://balthazardao.notion.site/Wallet-Wars-Season-1-Prize-Raffle-47febd8e22c147e09757bf6a325ab7d7" class="floating-button" id="notion-button">
+      <img src="https://www.notion.so/front-static/favicon.ico" alt="Notion">
+    </a>
+    <a href="https://github.com/bltzr-gg/ww-raffle" class="floating-button" id="github-button">
+      <img src="https://github.githubassets.com/favicons/favicon.svg" alt="GitHub">
+    </a>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>

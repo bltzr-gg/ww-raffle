@@ -1,0 +1,247 @@
+/* Sarpanch and VT323 Font Faces for Latin text only */
+@font-face {
+  font-family: "Sarpanch";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/sarpanch/v13/hESy6Xt4NCpRuk6Pzi2HTov1_H0m.woff2)
+    format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191,
+    U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: "Sarpanch";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/sarpanch/v13/hES16Xt4NCpRuk6PziV0bZ7Y3nAMR2kN.woff2)
+    format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191,
+    U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: "Sarpanch";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/sarpanch/v13/hES16Xt4NCpRuk6PziU8a57Y3nAMR2kN.woff2)
+    format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191,
+    U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: "VT323";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/vt323/v17/pxiKyp0ihIEF2isfFJXUdVNF.woff2)
+    format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191,
+    U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+:root {
+  --main-padding: 20px;
+  --container-width: 100%;
+  --container-margin: 10px auto;
+  --container-padding: 20px;
+  --heading-font-size: 40px;
+  --font-size: 20px;
+  --mobile-font-size: 14px;
+  --loading-height: 25px;
+  --background-color: #09291f;
+  --text-color: #fff;
+  --container-border-color: #2dcc9c;
+  --accent-color: #2dcc9c;
+  --button-background: #2dcc9c;
+  --button-border: #ddd;
+  --button-text: #333;
+  --form-background: #f9f9f9;
+  --form-border: rgba(0, 0, 0, 0.1);
+  --winner-text: #28a745;
+}
+
+.loading {
+  display: none;
+  height: var(--loading-height);
+  vertical-align: middle;
+  margin-left: 10px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Body Styles */
+body {
+  font-family: "VT323", monospace;
+  background-image: url("https://play.walletwars.io/images/space-matrix.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: var(--text-color); /* Use text color variable */
+  margin: 0;
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  text-align: center;
+  overflow-y: auto;
+  justify-content: flex-start;
+  background-color: var(--background-color); /* Use background color variable */
+}
+
+/* Container Styles */
+.container {
+  border: 3px solid var(--container-border-color);
+  border-radius: 20px;
+  box-shadow: 0 0 10px 5px var(--container-border-color),
+    0 0 64px var(--container-border-color) 80 inset;
+  background: var(--background-color);
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: var(--container-width);
+  max-width: 800px;
+  padding: var(--container-padding);
+  margin: 30px auto;
+}
+
+/* Heading 1 Styles */
+h1 {
+  font-family: "Sarpanch", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent-color);
+  font-size: var(--heading-font-size);
+  margin-bottom: var(--container-padding);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  flex-wrap: wrap;
+}
+
+h1 img {
+  vertical-align: middle;
+  height: 70px;
+}
+
+h1 span {
+  vertical-align: middle;
+  margin-left: 10px;
+}
+
+/* Textarea, Button, and Display Paragraph Styles */
+textarea,
+button,
+#processDisplay p,
+#winnerDisplay {
+  font-family: "VT323", monospace;
+  color: var(--button-text);
+  background-color: var(--button-background);
+  border: 2px solid var(--button-border);
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 15px;
+  font-size: var(--font-size);
+  transition: all 0.3s ease;
+}
+
+textarea {
+  resize: vertical;
+  background-color: var(--form-background);
+}
+
+#processDisplay p {
+  background-color: var(--form-background);
+  text-align: left;
+  font-size: var(--font-size);
+  padding: var(--container-padding);
+  margin-bottom: 15px;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px var(--form-border);
+}
+
+#winnerDisplay {
+  font-size: 22px;
+  font-weight: bold;
+  color: var(--winner-text);
+  margin-top: 20px;
+  padding: 15px 0;
+  background-color: var(--form-background);
+}
+
+/* Floating Buttons Styles */
+.floating-buttons {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 1000;
+}
+
+.floating-button {
+  display: block;
+  background-color: white;
+  border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  margin-bottom: 10px;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s;
+}
+
+.floating-button img {
+  width: 70%; /* Adjusts the size of the logo inside the button */
+}
+
+.floating-button:hover {
+  background-color: var(--accent-color);
+}
+
+@media only screen and (max-width: 768px) {
+  body {
+    padding: var(--main-padding);
+  }
+
+  .container {
+    width: var(--container-width);
+    margin: var(--container-margin);
+    padding: var(--container-padding);
+  }
+
+  h1 span {
+    font-size: var(--heading-font-size);
+    margin-bottom: var(--container-padding);
+  }
+
+  textarea,
+  #processDisplay p,
+  #winnerDisplay {
+    font-size: var(--mobile-font-size);
+  }
+
+  #processDisplay p {
+    font-size: var(--mobile-font-size);
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  }
+}
